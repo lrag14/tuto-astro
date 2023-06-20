@@ -1,0 +1,38 @@
+---
+////////////////////IMPORT
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+
+//////////////////////////CONST
+const pageTitle = 'About Me';
+const identity = {
+   firstName: 'lolo',
+   city: 'paris',
+   work: 'facilitess',
+};
+const { firstName, city, work } = identity;
+---
+
+<html lang="fr">
+   <head>
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="generator" content={Astro.generator} />
+      <title>About</title>
+   </head>
+   <body>
+      <Navigation />
+
+      <h1>{pageTitle}</h1>
+      <h2>mon premier site Astro</h2>
+      <p>
+         I am working {work} Astro's introductory tutorial. This is {firstName} the
+         second page on my {city} website, and it's the first one I built myself!
+      </p>
+      <p>
+         This site will update as I complete more of the tutorial, so keep
+         checking back and see how my journey is going!
+      </p>
+   </body>
+</html>

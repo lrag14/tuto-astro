@@ -1,7 +1,11 @@
 ---
+////////////////////IMPORT
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+//////////////////////////CONST
 ---
 
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -10,6 +14,13 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Navigation />
+		<h1>Home</h1>
+		<h2>mon premier site Astro</h2>
+		<script>
+			document.querySelector('.hamburger').addEventListener('click', () => {
+				document.querySelector('.nav-links').classList.toggle('expanded');
+			});
+		</script>
 	</body>
 </html>
